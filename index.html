@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>OSINT</title>
+    <link rel="stylesheet" href="main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="view-transition" content="same-origin">
+    <script src="index.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="title">
+            <img class="logo" src="logo.png">
+            <h1>OSINT - Operation Echo</h1>
+        </div>
+        <img class="icon icon-button" src="refresh.png" onclick="reloadIFrame();">
+    </header>
+    <main>
+        <div class="blocks">
+            <section id="section-dashboard">
+                <div class="section-header">
+                    <h1>Dashboard</h1>
+                    <a href="https://docs.google.com/spreadsheets/d/1Zg_Z-mqSnycDjmI3UX7QZZkeu0qqaKDneK9ivYOrfl8/edit?gid=0#gid=0" target="_blank">
+                        <img class="open-icon icon-button" src="open.png">
+                    </a>
+                </div>
+                <iframe id="dashboard"
+                    src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRCfSzNg8qK2vYAnJJMmI7W5nsZ3TDzFpzx8R_X3OK_xiZRB2ALa7mFFe-pF2uCVRZtXjEDeZQxMqV5/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;range=A1:B4&amp;headers=false"></iframe>
+            </section>
+            <section id="section-map">
+                <div class="section-header">
+                    <h1>Map</h1>
+                    <a href="https://www.google.com/maps/d/u/1/edit?mid=1kWBQ9SNwwDjUrEqiFN1LQ6r5q6pWpGw&ll=45.510963354824064%2C-73.60038999999999&z=14" target="_blank">
+                        <img class="open-icon icon-button" src="open.png">
+                    </a>
+                </div>
+                <iframe id="map"
+                    src="https://www.google.com/maps/d/u/6/embed?mid=1kWBQ9SNwwDjUrEqiFN1LQ6r5q6pWpGw&ehbc=2E312F&noprof=1"></iframe>
+            </section>
+            <section id="section-traffic">
+                <div class="section-header">
+                    <h1>Traffic</h1>
+                </div>
+                <img id="traffic"
+                    src="https://www.google.com/maps/vt/data=XHPXLaEuKujieiEd8RwyvMDhzojV5_gjWQSbPscZ_9NX2yhhyRiMCpfJoDhfSpm9eD6RZPEjKQbe1ppLMbogrTVPaicCJiBPBHmHz766KpQ3_mtYMRmd-vxBMjBbWLuO6sG_CNtcqwIHw7Dt0UNQGQGzvFshZg5HVLXmyoWyYsdRE0_vY1mezqVGFLn80Lk2KefwGc1a2Rh3tcFqNPd6p5lbeJZ6_R1qYFuQx0STM_4sx8m1u4IfFLYq1sCSj4XYgDSgS_zcwpgzDO7w5A">
+            </section>
+        </div>
+    </main>
+    <script>
+        // window.setInterval("reloadIFrame();", 5000);
+        function reloadIFrame() {
+            document.getElementById("dashboard").src = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRCfSzNg8qK2vYAnJJMmI7W5nsZ3TDzFpzx8R_X3OK_xiZRB2ALa7mFFe-pF2uCVRZtXjEDeZQxMqV5/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;range=A1:B4&amp;headers=false";
+            document.getElementById("map").src = "https://www.google.com/maps/d/u/6/embed?mid=1kWBQ9SNwwDjUrEqiFN1LQ6r5q6pWpGw&ehbc=2E312F&noprof=1";
+            document.getElementById("traffic").src = "https://www.google.com/maps/vt/data=XHPXLaEuKujieiEd8RwyvMDhzojV5_gjWQSbPscZ_9NX2yhhyRiMCpfJoDhfSpm9eD6RZPEjKQbe1ppLMbogrTVPaicCJiBPBHmHz766KpQ3_mtYMRmd-vxBMjBbWLuO6sG_CNtcqwIHw7Dt0UNQGQGzvFshZg5HVLXmyoWyYsdRE0_vY1mezqVGFLn80Lk2KefwGc1a2Rh3tcFqNPd6p5lbeJZ6_R1qYFuQx0STM_4sx8m1u4IfFLYq1sCSj4XYgDSgS_zcwpgzDO7w5A";
+        }
+    </script>
+</body>
+
+</html>

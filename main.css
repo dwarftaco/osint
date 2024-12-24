@@ -1,0 +1,227 @@
+:root {
+    --main: hsl(0, 0%, 13%);
+    --accent: #212121;
+    --fancy: #CA9C6A;
+}
+
+html {
+    height: 100%;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body {
+    position: relative;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+    min-height: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    background: #FAFAFA;
+}
+
+header {
+    padding: 0px 30px;
+    background-color: var(--accent);
+    /* font-family: 'Courier New', Courier, monospace; */
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .title {
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    align-items: center;
+}
+
+header .title h1 {
+    color: #EEEEEE;
+}
+
+header .icon {
+    height: 30px;
+    padding-right: 15px;
+}
+
+header .logo {
+    height: 60px;
+    padding-right: 15px;
+}
+
+header nav a {
+    color: #EEEEEE;
+    text-decoration: none;
+}
+
+nav {
+    padding: 10px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav li .current {
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    align-items: top;
+}
+
+.blocks {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.blocks>section {
+    min-width: 750px;
+}
+
+#section-dashboard {
+    flex-grow: 1 1 auto;
+}
+
+#section-map {
+    flex-grow: 2 2 auto;
+}
+
+#section-traffic {
+    flex-grow: 1 1 auto;
+}
+
+#dashboard {
+    height: 500px;
+    width: 100%;
+}
+
+#map {
+    height: 500px;
+    width: 100%;
+}
+
+section {
+    /* padding: 10px 40px; */
+    margin: 1rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 1rem;
+    background-color: #FFFFFF;
+    border-radius: 5px;
+    border: 1px solid #DDDDDD;
+}
+
+section button {
+    background-color: var(--accent);
+    color: white;
+    border: none;
+    border-radius: 0.3rem;
+    width: 10rem;
+    height: 3rem;
+    filter: drop-shadow(2px 4px 1px rgba(0, 0, 0, 0.1));
+    transition: .3s;
+    cursor: pointer;
+}
+
+section button:hover {
+    background-color: #8f2a29;
+    filter: drop-shadow(2px 4px 1px rgba(0, 0, 0, 0.2));
+}
+
+section button svg {
+    height: auto;
+    max-width: 70px;
+    filter: drop-shadow(2px 4px 1px rgba(0, 0, 0, 0.1));
+    transition: transform .3s ease-out;
+}
+
+section button svg:hover {
+    transform: translate(0, -3px);
+    filter: drop-shadow(2px 4px 1px rgba(0, 0, 0, 0.15));
+}
+
+
+section h1 {
+    text-align: center;
+    font-size: 2em;
+    line-height: 1.1;
+}
+
+section h2 {
+    text-align: center;
+    font-size: 1.5em;
+    line-height: 1.1;
+    margin: 0 0 0.5rem 0;
+}
+
+section h3 {
+    margin: 0 0 0.5rem 0;
+}
+
+section p {
+    text-align: center;
+    font-size: 1.25em;
+    line-height: 1;
+}
+
+.section-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.open-icon {
+    width: 30px;
+    padding-left: 1rem;
+}
+
+.icon-button {
+    cursor: pointer;
+}
+
+svg {
+    fill: var(--main);
+}
+
+hr {
+    border: 1px solid rgb(0, 0, 0, 0.2);
+}
+
+h1,
+h2,
+h3,
+h4 {
+    color: rgb(52, 52, 52, 0.9);
+}
+
+p {
+    size: 16px;
+    line-height: 1.5;
+    color: rgb(33, 33, 33, 0.99);
+}
