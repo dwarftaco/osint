@@ -22,19 +22,20 @@
         <img class="icon icon-button" src="refresh.png" onclick="reloadIFrame();">
     </header>
     <main>
+        <h1 id="countdown">...</h1>
         <div class="blocks">
-            <section id="section-dashboard">
+            <section class="section-large-stretch">
                 <div class="section-header">
                     <h1>Dashboard</h1>
-                    <a href="https://docs.google.com/spreadsheets/u/1/d/1X4dCR_Y8lFi1MQDKJyMkJ0a5ovpIix8hNNZ35F_92mE/edit?gid=0#gid=0"
+                    <a href="https://docs.google.com/document/d/12cTc13zjS8RemGw8kJxpNYIo-77bp3SXjQlFtuYLyIs/edit?tab=t.0"
                         target="_blank">
                         <img class="icon icon-button" src="open.png">
                     </a>
                 </div>
                 <iframe id="dashboard"
-                    src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQxseFvG8S3InqBr9mE4m_AcUMtYX5-VqSyCL6TK3SXSdSTO8mMwIhp4cAlwBEHqDQBHMAfRtHSx0hH/pubhtml?widget=true&amp;headers=false"></iframe>
+                    src="https://docs.google.com/document/d/e/2PACX-1vRRCU4PUvB_wtGfXlDvmlJ1jgXgvdZTruy_4eGW70i4a3yixU4XIY9aZxEz8FJaU5-OoJddGJIO91xW/pub?embedded=true"></iframe>
             </section>
-            <section id="section-map">
+            <section class="section-large-stretch">
                 <div class="section-header">
                     <h1>Map</h1>
                     <a href="https://www.google.com/maps/d/u/1/edit?mid=1kWBQ9SNwwDjUrEqiFN1LQ6r5q6pWpGw&ll=45.510963354824064%2C-73.60038999999999&z=14"
@@ -45,18 +46,24 @@
                 <iframe id="map"
                     src="https://www.google.com/maps/d/u/6/embed?mid=1kWBQ9SNwwDjUrEqiFN1LQ6r5q6pWpGw&ehbc=2E312F&noprof=1"></iframe>
             </section>
-            <section id="section-traffic">
+            <!-- <section class="section-small">
+                <iframe src="https://free.timeanddate.com/clock/i9ox3r2s/n165/tt0/tw0/tm1/ts1/tb4" frameborder="0"
+                    width="87" height="33"></iframe>
+                
+                TODO: Add weather
+            </section> -->
+            <section class="section-medium">
                 <div class="section-header">
                     <h1>Traffic</h1>
                 </div>
                 <img id="traffic"
                     src="https://www.google.com/maps/vt/data=XHPXLaEuKujieiEd8RwyvMDhzojV5_gjWQSbPscZ_9NX2yhhyRiMCpfJoDhfSpm9eD6RZPEjKQbe1ppLMbogrTVPaicCJiBPBHmHz766KpQ3_mtYMRmd-vxBMjBbWLuO6sG_CNtcqwIHw7Dt0UNQGQGzvFshZg5HVLXmyoWyYsdRE0_vY1mezqVGFLn80Lk2KefwGc1a2Rh3tcFqNPd6p5lbeJZ6_R1qYFuQx0STM_4sx8m1u4IfFLYq1sCSj4XYgDSgS_zcwpgzDO7w5A">
             </section>
-            <section id="section-cctv">
+
+            <section class="section-small">
                 <div class="section-header">
                     <h1>CCTV</h1>
                 </div>
-                <!-- <iframe id="cctv" src="http://www.quebec511.info/fr/Carte/Default.aspx?couche=camra,condt,cmnt&amp;action=initcouches&amp;zoom=12&amp;lat=45.509538&amp;lng=-73.627243"></iframe> -->
                 <div class="cctv-grid">
                     <iframe
                         src="https://wxyzwebcams.com/network/joe.php?url=https://cdn3.wowza.com/5/REFkVjRKS0dzbTYr/live/group1Delayed_360p/playlist.m3u8"
@@ -65,16 +72,19 @@
                 </div>
             </section>
 
+            <section class="section-large-stretch">
+                <div class="section-header">
+                    <h1>Misc. Info</h1>
+                    <a href="https://docs.google.com/document/d/1kDXEjwGRZlaUAgcsZciCwdfWunRdaQRTSLLCxPcDix8/edit?tab=t.0#heading=h.x5zqaiixnzf9"
+                        target="_blank">
+                        <img class="icon icon-button" src="open.png">
+                    </a>
+                </div>
+                <iframe id="misc"
+                    src="https://docs.google.com/document/d/e/2PACX-1vQB3aoK1ks-cDKkrYvW1mSHQBZvb806UR7yJNOkw8M39ZOahSprImaA_CyXdc7Ycy4uQj9ClsSa9nKg/pub?embedded=true"></iframe>
+            </section>
         </div>
     </main>
-    <script>
-        // window.setInterval("reloadIFrame();", 5000);
-        function reloadIFrame() {
-            document.getElementById("dashboard").src = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQxseFvG8S3InqBr9mE4m_AcUMtYX5-VqSyCL6TK3SXSdSTO8mMwIhp4cAlwBEHqDQBHMAfRtHSx0hH/pubhtml?widget=true&amp;headers=false";
-            document.getElementById("map").src = "https://www.google.com/maps/d/u/6/embed?mid=1kWBQ9SNwwDjUrEqiFN1LQ6r5q6pWpGw&ehbc=2E312F&noprof=1";
-            document.getElementById("traffic").src = "https://www.google.com/maps/vt/data=XHPXLaEuKujieiEd8RwyvMDhzojV5_gjWQSbPscZ_9NX2yhhyRiMCpfJoDhfSpm9eD6RZPEjKQbe1ppLMbogrTVPaicCJiBPBHmHz766KpQ3_mtYMRmd-vxBMjBbWLuO6sG_CNtcqwIHw7Dt0UNQGQGzvFshZg5HVLXmyoWyYsdRE0_vY1mezqVGFLn80Lk2KefwGc1a2Rh3tcFqNPd6p5lbeJZ6_R1qYFuQx0STM_4sx8m1u4IfFLYq1sCSj4XYgDSgS_zcwpgzDO7w5A";
-        }
-    </script>
 </body>
 
 </html>

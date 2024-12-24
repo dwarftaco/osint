@@ -81,8 +81,16 @@ nav li .current {
 
 main {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    justify-items: center;
     align-items: top;
+}
+
+#countdown {
+    margin-top: 2rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    text-align: center;
 }
 
 .blocks {
@@ -100,20 +108,20 @@ main {
     min-width: 600px;
 }
 
-#section-dashboard {
+.section-large-stretch {
+    flex: 4 4 auto;
+}
+
+.section-medium-stretch {
     flex: 2 2 auto;
 }
 
-#section-map {
-    flex: 4 4 auto;
-}
-
-#section-traffic {
+.section-medium {
     flex: 2 2 2;
 }
 
-#section-cctv {
-    flex: 4 4 auto;
+.section-small {
+    flex: 1 1 1;
 }
 
 #traffic {
@@ -131,6 +139,11 @@ main {
 }
 
 #cctv {
+    height: 400px;
+    width: 100%;
+}
+
+#misc {
     height: 400px;
     width: 100%;
 }
@@ -263,4 +276,28 @@ p {
         width: 100%;
     }
 
+}
+
+.google-weather-place {
+    width: calc(655px/2); height: calc(450px/2);
+}
+.google-weather-crop {
+    width: calc(655px/2); height: calc(450px/2);
+    overflow: hidden;
+    transition: 0.3s;
+    position: absolute;
+}
+
+.google-weather {
+    position: relative;
+    left: -180px; top: -180px;
+    width: 2560px; height: 5120px;
+    transform: scale(0.5);
+    transform-origin: 180px 180px;
+    transition: 0.3s;
+    position: absolute;
+}
+.google-weather:hover {
+    transform: scale(1);
+    z-index: 1000;
 }
