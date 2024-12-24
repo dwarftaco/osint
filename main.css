@@ -226,10 +226,6 @@ section .icon {
     padding-left: 1rem;
 }
 
-section .icon .img {
-    align: center;
-}
-
 .icon-button {
     cursor: pointer;
 
@@ -276,28 +272,4 @@ p {
         width: 100%;
     }
 
-}
-
-.google-weather-place {
-    width: calc(655px/2); height: calc(450px/2);
-}
-.google-weather-crop {
-    width: calc(655px/2); height: calc(450px/2);
-    overflow: hidden;
-    transition: 0.3s;
-    position: absolute;
-}
-
-.google-weather {
-    position: relative;
-    left: -180px; top: -180px;
-    width: 2560px; height: 5120px;
-    transform: scale(0.5);
-    transform-origin: 180px 180px;
-    transition: 0.3s;
-    position: absolute;
-}
-.google-weather:hover {
-    transform: scale(1);
-    z-index: 1000;
 }
