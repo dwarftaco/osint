@@ -21,6 +21,23 @@ var x = setInterval(function () {
     }
 }, 1000);
 
+let options = {
+    timeZone: 'EST',
+    year: 'numeric',
+    month: 'numeric',
+    day: 'numeric',
+    hour: 'numeric',
+    minute: 'numeric',
+    second: 'numeric',
+  },
+  formatter = new Intl.DateTimeFormat([], options);
+
+  var x = setInterval(function () {
+    document.getElementById("datetime").innerHTML = formatter.format(new Date());
+}, 1000);
+
+document.getElementById("datetime").innerHTML = formatter.format(new Date());
+
 // window.setInterval("reloadIFrame();", 5000);
 function reloadIFrame() {
     document.getElementById("dashboard").src = "https://docs.google.com/document/d/e/2PACX-1vRRCU4PUvB_wtGfXlDvmlJ1jgXgvdZTruy_4eGW70i4a3yixU4XIY9aZxEz8FJaU5-OoJddGJIO91xW/pub?embedded=true";
