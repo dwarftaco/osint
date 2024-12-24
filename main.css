@@ -96,20 +96,28 @@ main {
     margin-bottom: 1rem;
 }
 
-.blocks > section {
+.blocks>section {
     min-width: 600px;
 }
 
 #section-dashboard {
-    flex-grow: 1 1 auto;
+    flex: 2 2 auto;
 }
 
 #section-map {
-    flex-grow: 2 2 auto;
+    flex: 4 4 auto;
 }
 
 #section-traffic {
-    flex-grow: 1 1 auto;
+    flex: 2 2 2;
+}
+
+#section-cctv {
+    flex: 4 4 auto;
+}
+
+#traffic {
+    width: 100%;
 }
 
 #dashboard {
@@ -118,6 +126,11 @@ main {
 }
 
 #map {
+    height: 400px;
+    width: 100%;
+}
+
+#cctv {
     height: 400px;
     width: 100%;
 }
@@ -165,7 +178,6 @@ section button svg:hover {
     filter: drop-shadow(2px 4px 1px rgba(0, 0, 0, 0.15));
 }
 
-
 section h1 {
     text-align: center;
     font-size: 2em;
@@ -196,13 +208,23 @@ section p {
     align-items: center;
 }
 
-.open-icon {
-    width: 30px;
+section .icon {
+    width: 20px;
     padding-left: 1rem;
+}
+
+section .icon .img {
+    align: center;
 }
 
 .icon-button {
     cursor: pointer;
+
+}
+
+.icon-button:hover {
+    transform: translate(0, -1px);
+    filter: drop-shadow(2px 2px 0px rgba(0, 0, 0, 0.05));
 }
 
 svg {
@@ -224,4 +246,21 @@ p {
     size: 16px;
     line-height: 1.5;
     color: rgb(33, 33, 33, 0.99);
+}
+
+@media only screen and (max-width: 780px) {
+    .blocks>section {
+        min-width: 300px;
+    }
+
+    #dashboard {
+        height: 200px;
+        width: 100%;
+    }
+
+    #map {
+        height: 200px;
+        width: 100%;
+    }
+
 }

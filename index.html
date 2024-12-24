@@ -26,9 +26,9 @@
             <section id="section-dashboard">
                 <div class="section-header">
                     <h1>Dashboard</h1>
-                    <a href="https://docs.google.com/spreadsheets/d/1Zg_Z-mqSnycDjmI3UX7QZZkeu0qqaKDneK9ivYOrfl8/edit?gid=0#gid=0"
+                    <a href="https://docs.google.com/spreadsheets/u/1/d/1X4dCR_Y8lFi1MQDKJyMkJ0a5ovpIix8hNNZ35F_92mE/edit?gid=0#gid=0"
                         target="_blank">
-                        <img class="open-icon icon-button" src="open.png">
+                        <img class="icon icon-button" src="open.png">
                     </a>
                 </div>
                 <iframe id="dashboard"
@@ -39,7 +39,7 @@
                     <h1>Map</h1>
                     <a href="https://www.google.com/maps/d/u/1/edit?mid=1kWBQ9SNwwDjUrEqiFN1LQ6r5q6pWpGw&ll=45.510963354824064%2C-73.60038999999999&z=14"
                         target="_blank">
-                        <img class="open-icon icon-button" src="open.png">
+                        <img class="icon icon-button" src="open.png">
                     </a>
                 </div>
                 <iframe id="map"
@@ -52,12 +52,25 @@
                 <img id="traffic"
                     src="https://www.google.com/maps/vt/data=XHPXLaEuKujieiEd8RwyvMDhzojV5_gjWQSbPscZ_9NX2yhhyRiMCpfJoDhfSpm9eD6RZPEjKQbe1ppLMbogrTVPaicCJiBPBHmHz766KpQ3_mtYMRmd-vxBMjBbWLuO6sG_CNtcqwIHw7Dt0UNQGQGzvFshZg5HVLXmyoWyYsdRE0_vY1mezqVGFLn80Lk2KefwGc1a2Rh3tcFqNPd6p5lbeJZ6_R1qYFuQx0STM_4sx8m1u4IfFLYq1sCSj4XYgDSgS_zcwpgzDO7w5A">
             </section>
+            <section id="section-cctv">
+                <div class="section-header">
+                    <h1>CCTV</h1>
+                </div>
+                <!-- <iframe id="cctv" src="http://www.quebec511.info/fr/Carte/Default.aspx?couche=camra,condt,cmnt&amp;action=initcouches&amp;zoom=12&amp;lat=45.509538&amp;lng=-73.627243"></iframe> -->
+                <div class="cctv-grid">
+                    <iframe
+                        src="https://wxyzwebcams.com/network/joe.php?url=https://cdn3.wowza.com/5/REFkVjRKS0dzbTYr/live/group1Delayed_360p/playlist.m3u8"
+                        scrolling="no" marginwidth="0" marginheight="0" allow="autoplay" frameborder="0"
+                        allowfullscreen="" style="border: none;"></iframe>
+                </div>
+            </section>
+
         </div>
     </main>
     <script>
         // window.setInterval("reloadIFrame();", 5000);
         function reloadIFrame() {
-            document.getElementById("dashboard").src = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRCfSzNg8qK2vYAnJJMmI7W5nsZ3TDzFpzx8R_X3OK_xiZRB2ALa7mFFe-pF2uCVRZtXjEDeZQxMqV5/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false";
+            document.getElementById("dashboard").src = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQxseFvG8S3InqBr9mE4m_AcUMtYX5-VqSyCL6TK3SXSdSTO8mMwIhp4cAlwBEHqDQBHMAfRtHSx0hH/pubhtml?widget=true&amp;headers=false";
             document.getElementById("map").src = "https://www.google.com/maps/d/u/6/embed?mid=1kWBQ9SNwwDjUrEqiFN1LQ6r5q6pWpGw&ehbc=2E312F&noprof=1";
             document.getElementById("traffic").src = "https://www.google.com/maps/vt/data=XHPXLaEuKujieiEd8RwyvMDhzojV5_gjWQSbPscZ_9NX2yhhyRiMCpfJoDhfSpm9eD6RZPEjKQbe1ppLMbogrTVPaicCJiBPBHmHz766KpQ3_mtYMRmd-vxBMjBbWLuO6sG_CNtcqwIHw7Dt0UNQGQGzvFshZg5HVLXmyoWyYsdRE0_vY1mezqVGFLn80Lk2KefwGc1a2Rh3tcFqNPd6p5lbeJZ6_R1qYFuQx0STM_4sx8m1u4IfFLYq1sCSj4XYgDSgS_zcwpgzDO7w5A";
         }
