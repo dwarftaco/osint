@@ -1,5 +1,12 @@
+var iframeMap = {
+    "Dashboard": "https://docs.google.com/document/d/e/2PACX-1vRRCU4PUvB_wtGfXlDvmlJ1jgXgvdZTruy_4eGW70i4a3yixU4XIY9aZxEz8FJaU5-OoJddGJIO91xW/pub?embedded=true",
+    "Map": "https://www.google.com/maps/d/u/6/embed?mid=1kWBQ9SNwwDjUrEqiFN1LQ6r5q6pWpGw&ehbc=2E312F&noprof=1",
+    "CCTV": "https://www.quebec511.info/fr/Carte/fr/Default.aspx?idreg=6",
+    "Misc": "https://docs.google.com/document/d/e/2PACX-1vQB3aoK1ks-cDKkrYvW1mSHQBZvb806UR7yJNOkw8M39ZOahSprImaA_CyXdc7Ycy4uQj9ClsSa9nKg/pub?embedded=true"
+}
+
 // Estimated datetime for now
-var countDownDate = new Date("Dec 27, 2024 12:00:00").getTime();
+var countDownDate = new Date("Dec 27, 2024 12:00:00 GMT-5").getTime();
 
 var x = setInterval(function () {
 
@@ -29,14 +36,13 @@ let options = {
     hour: 'numeric',
     minute: 'numeric',
     second: 'numeric',
-  },
-  formatter = new Intl.DateTimeFormat([], options);
+},
+    formatter = new Intl.DateTimeFormat([], options);
 
-  var x = setInterval(function () {
+var x = setInterval(function () {
     document.getElementById("datetime").innerHTML = formatter.format(new Date());
 }, 1000);
 
-document.getElementById("datetime").innerHTML = formatter.format(new Date());
 
 // window.setInterval("reloadIFrame();", 5000);
 function reloadIFrame() {
@@ -45,4 +51,19 @@ function reloadIFrame() {
     document.getElementById("traffic").src = "https://www.google.com/maps/vt/data=XHPXLaEuKujieiEd8RwyvMDhzojV5_gjWQSbPscZ_9NX2yhhyRiMCpfJoDhfSpm9eD6RZPEjKQbe1ppLMbogrTVPaicCJiBPBHmHz766KpQ3_mtYMRmd-vxBMjBbWLuO6sG_CNtcqwIHw7Dt0UNQGQGzvFshZg5HVLXmyoWyYsdRE0_vY1mezqVGFLn80Lk2KefwGc1a2Rh3tcFqNPd6p5lbeJZ6_R1qYFuQx0STM_4sx8m1u4IfFLYq1sCSj4XYgDSgS_zcwpgzDO7w5A";
     document.getElementById("cctv").src = "https://wxyzwebcams.com/network/joe.php?url=https://cdn3.wowza.com/5/REFkVjRKS0dzbTYr/live/group1Delayed_360p/playlist.m3u8";
     document.getElementById("misc").src = "https://docs.google.com/document/d/e/2PACX-1vQB3aoK1ks-cDKkrYvW1mSHQBZvb806UR7yJNOkw8M39ZOahSprImaA_CyXdc7Ycy4uQj9ClsSa9nKg/pub?embedded=true";
+}
+
+function openModal(block) {
+    document.body.setAttribute("class", "modal-open");
+
+    document.getElementById('card-modal').style.display = "block";
+    document.getElementById("modal-title").innerHTML = block;
+    document.getElementById("modal-iframe").src = iframeMap[block];
+}
+
+
+function closeModal() {
+    document.getElementById('card-modal').style.display = "none";
+    document.body.setAttribute("class", "");
+    document.getElementById("modal-iframe").src = "";
 }

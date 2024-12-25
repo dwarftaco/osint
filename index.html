@@ -29,22 +29,30 @@
         <div class="blocks">
             <section class="section-large-stretch">
                 <div class="section-header">
-                    <h1>Dashboard</h1>
-                    <a href="https://docs.google.com/document/d/12cTc13zjS8RemGw8kJxpNYIo-77bp3SXjQlFtuYLyIs/edit?tab=t.0"
-                        target="_blank">
-                        <img class="icon icon-button" src="open.png">
-                    </a>
+                    <br>
+                    <div class="section-title">
+                        <h1>Dashboard</h1>
+                        <a href="https://docs.google.com/document/d/12cTc13zjS8RemGw8kJxpNYIo-77bp3SXjQlFtuYLyIs/edit?tab=t.0"
+                            target="_blank">
+                            <img class="icon icon-button" src="open.png">
+                        </a>
+                    </div>
+                    <img class="icon icon-button fullscreen" src="fullscreen.png" onclick="openModal('Dashboard')">
                 </div>
                 <iframe id="dashboard"
                     src="https://docs.google.com/document/d/e/2PACX-1vRRCU4PUvB_wtGfXlDvmlJ1jgXgvdZTruy_4eGW70i4a3yixU4XIY9aZxEz8FJaU5-OoJddGJIO91xW/pub?embedded=true"></iframe>
             </section>
             <section class="section-large-stretch">
                 <div class="section-header">
-                    <h1>Map</h1>
-                    <a href="https://www.google.com/maps/d/u/1/edit?mid=1kWBQ9SNwwDjUrEqiFN1LQ6r5q6pWpGw&ll=45.510963354824064%2C-73.60038999999999&z=14"
-                        target="_blank">
-                        <img class="icon icon-button" src="open.png">
-                    </a>
+                    <br>
+                    <div class="section-title">
+                        <h1>Map</h1>
+                        <a href="https://www.google.com/maps/d/u/1/edit?mid=1kWBQ9SNwwDjUrEqiFN1LQ6r5q6pWpGw&ll=45.510963354824064%2C-73.60038999999999&z=14"
+                            target="_blank">
+                            <img class="icon icon-button" src="open.png">
+                        </a>
+                    </div>
+                    <img class="icon icon-button fullscreen" src="fullscreen.png" onclick="openModal('Map')">
                 </div>
                 <iframe id="map"
                     src="https://www.google.com/maps/d/u/6/embed?mid=1kWBQ9SNwwDjUrEqiFN1LQ6r5q6pWpGw&ehbc=2E312F&noprof=1"></iframe>
@@ -57,16 +65,17 @@
                     style="border: 1px solid #10658E;"></iframe>
             </section>
             <section class="section-medium">
-                <div class="section-header">
+                <div class="section-title">
                     <h1>Traffic</h1>
                 </div>
                 <img id="traffic"
                     src="https://www.google.com/maps/vt/data=XHPXLaEuKujieiEd8RwyvMDhzojV5_gjWQSbPscZ_9NX2yhhyRiMCpfJoDhfSpm9eD6RZPEjKQbe1ppLMbogrTVPaicCJiBPBHmHz766KpQ3_mtYMRmd-vxBMjBbWLuO6sG_CNtcqwIHw7Dt0UNQGQGzvFshZg5HVLXmyoWyYsdRE0_vY1mezqVGFLn80Lk2KefwGc1a2Rh3tcFqNPd6p5lbeJZ6_R1qYFuQx0STM_4sx8m1u4IfFLYq1sCSj4XYgDSgS_zcwpgzDO7w5A">
             </section>
-
             <section class="section-small">
                 <div class="section-header">
+                    <br>
                     <h1>CCTV</h1>
+                    <img class="icon icon-button fullscreen" src="fullscreen.png" onclick="openModal('CCTV')">
                 </div>
                 <div class="cctv-grid">
                     <iframe
@@ -75,20 +84,30 @@
                         allowfullscreen="" style="border: none;"></iframe>
                 </div>
             </section>
-
             <section class="section-large-stretch">
                 <div class="section-header">
-                    <h1>Misc. Info</h1>
-                    <a href="https://docs.google.com/document/d/1kDXEjwGRZlaUAgcsZciCwdfWunRdaQRTSLLCxPcDix8/edit?tab=t.0#heading=h.x5zqaiixnzf9"
-                        target="_blank">
-                        <img class="icon icon-button" src="open.png">
-                    </a>
+                    <br>
+                    <div class="section-title">
+                        <h1>Misc. Info</h1>
+                        <a href="https://docs.google.com/document/d/1kDXEjwGRZlaUAgcsZciCwdfWunRdaQRTSLLCxPcDix8/edit?tab=t.0#heading=h.x5zqaiixnzf9"
+                            target="_blank">
+                            <img class="icon icon-button" src="open.png">
+                        </a>
+                    </div>
+                    <img class="icon icon-button fullscreen" src="fullscreen.png" onclick="openModal('Misc')">
                 </div>
                 <iframe id="misc"
                     src="https://docs.google.com/document/d/e/2PACX-1vQB3aoK1ks-cDKkrYvW1mSHQBZvb806UR7yJNOkw8M39ZOahSprImaA_CyXdc7Ycy4uQj9ClsSa9nKg/pub?embedded=true"></iframe>
             </section>
         </div>
     </main>
+
+    <!-- Card Modal -->
+    <div id="card-modal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2 id="modal-title">Hello there</h2>
+        <iframe id="modal-iframe"></iframe>
+    </div>
 </body>
 
 </html>
