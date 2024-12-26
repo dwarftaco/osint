@@ -28,14 +28,14 @@ header {
     /* font-family: 'Courier New', Courier, monospace; */
 
     background-image: url("wrapping-paper.avif");
-    background-size: 200px 200px;
+    background-size: 300px 300px;
 
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
 
-    box-shadow: 0px 2px 3px rgba(0,0,0,0.3);
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3);
 }
 
 header .title {
@@ -51,7 +51,8 @@ header .title {
     margin: 0.3rem;
 }
 
-header .title h1,h2 {
+header .title h1,
+h2 {
     color: #333333;
 }
 
@@ -100,14 +101,14 @@ main {
     justify-items: center;
 }
 
-main > h2 {
+main>h2 {
     margin-top: 2rem;
     margin-left: 1rem;
     margin-right: 1rem;
     text-align: center;
 }
 
-main > #countdown {
+main>#countdown {
     margin-top: 0rem;
 }
 
@@ -128,6 +129,10 @@ main > #countdown {
 
 .section-large-stretch {
     flex: 4 4 auto;
+}
+
+.section-large {
+    flex: 0 750px;
 }
 
 .section-medium-stretch {
@@ -264,6 +269,30 @@ section .icon {
     filter: drop-shadow(2px 2px 0px rgba(0, 0, 0, 0.05));
 }
 
+.cctv-grid {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    max-width: 650px;
+    flex-wrap: wrap;
+}
+
+.cctv-grid>iframe {
+    max-width: 200px;
+    max-height: 135px;
+}
+
+.cctv-grid>video {
+    width: 200px;
+    height: 135px;
+}
+
+video.loading {
+    background: black url(loader.gif) center center no-repeat;
+}
+
 /* section .icon.fullscreen {
     margin-left: auto;
 } */
@@ -300,8 +329,8 @@ p {
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgb(0,0,0);
-    background-color: rgba(0,0,0,0.9);
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.9);
 }
 
 #modal-title {
@@ -316,8 +345,13 @@ p {
 }
 
 @keyframes zoom {
-    from {transform:scale(0)} 
-    to {transform:scale(1)}
+    from {
+        transform: scale(0)
+    }
+
+    to {
+        transform: scale(1)
+    }
 }
 
 .close {
@@ -375,12 +409,12 @@ body.modal-open {
     header .title .img-title {
         height: 1rem;
     }
-    
+
     header .icon {
         height: 1rem;
         /* padding-right: 15px; */
     }
-    
+
     header .logo {
         height: 2rem;
         padding-right: 15px;
