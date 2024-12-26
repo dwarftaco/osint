@@ -39,7 +39,7 @@ let options = {
     formatter = new Intl.DateTimeFormat([], options);
 
 var x = setInterval(function () {
-    document.getElementById("datetime").innerHTML = formatter.format(new Date());
+    document.getElementById("datetime").innerHTML = "Montreal (GMT-5)<br>" + formatter.format(new Date());
 }, 1000);
 
 

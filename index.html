@@ -19,13 +19,11 @@
             <img class="logo" src="handwritten-logo.png">
             <img class="img-title" src="handwritten-title.svg">
         </div>
-        <!-- <div class="paper-button">
-            <img class="icon icon-button" src="handwritten-refresh.png" onclick="reloadIFrame();">
-        </div> -->
+        <!-- <img class="icon icon-button" src="refresh.png" onclick="reloadIFrame();"> -->
     </header>
     <main>
-        <h1>Merry Christmas, Agents! ☃️🎄</h1>
-        <h1 id="countdown">...</h1>
+        <h2>Merry Christmas, Agents! ☃️🎄</h2>
+        <h2 id="countdown">...</h2>
         <div class="blocks">
             <section class="section-large-stretch">
                 <div class="section-header">
@@ -58,7 +56,7 @@
                     src="https://www.google.com/maps/d/u/6/embed?mid=1kWBQ9SNwwDjUrEqiFN1LQ6r5q6pWpGw&ehbc=2E312F&noprof=1"></iframe>
             </section>
             <section class="section-small">
-                <h1 id="datetime">...</h1>
+                <p id="datetime">...<br>&nbsp</p>
                 <iframe
                     src="https://api.wo-cloud.com/content/widget/?geoObjectKey=11162112&language=en&region=US&timeFormat=HH:mm&windUnit=kmh&systemOfMeasurement=imperial&temperatureUnit=celsius"
                     name="CW2" scrolling="no" width="100%" height="318" frameborder="0"
@@ -74,10 +72,9 @@
             <section class="section-small">
                 <div class="section-title">
                     <h1>CCTV</h1>
-                    <a href="https://www.quebec511.info/fr/Carte/fr/Default.aspx?idreg=6"
-                            target="_blank">
-                            <img class="icon icon-button" src="open.png">
-                        </a>
+                    <a href="https://www.quebec511.info/fr/Carte/fr/Default.aspx?idreg=6" target="_blank">
+                        <img class="icon icon-button" src="open.png">
+                    </a>
                 </div>
                 <div class="cctv-grid">
                     <iframe
@@ -107,7 +104,7 @@
     <!-- Card Modal -->
     <div id="card-modal" class="modal">
         <span class="close" onclick="closeModal()">&times;</span>
-        <h2 id="modal-title">Hello there</h2>
+        <h1 id="modal-title">Hello there</h1>
         <iframe id="modal-iframe"></iframe>
     </div>
 </body>
