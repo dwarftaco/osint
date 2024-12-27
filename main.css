@@ -171,6 +171,10 @@ main>#countdown {
     width: 100%;
 }
 
+#live-drop {
+    min-height: 600px;
+}
+
 #newsfeeds {
     /* Remove the default bullets */
     list-style-type: none;
@@ -459,10 +463,20 @@ body.modal-open {
     .modal-image {
         width: 100%;
     }
+
+    #live-drop {
+        min-height: 600px;
+    }
+    
 }
 
 @media only screen and (max-width: 480px) {
     .blocks>section {
         min-width: 300px;
     }
+
+    #live-drop {
+        min-height: 400px;
+    }
+    
 }

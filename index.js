@@ -4,7 +4,7 @@ var iframeMap = {
     "Misc": "https://docs.google.com/document/d/e/2PACX-1vQB3aoK1ks-cDKkrYvW1mSHQBZvb806UR7yJNOkw8M39ZOahSprImaA_CyXdc7Ycy4uQj9ClsSa9nKg/pub?embedded=true"
 }
 
-var countDownDate = new Date("Dec 27, 2024 16:00:00 GMT-5").getTime();
+var countDownDate = new Date("Dec 27, 2024 17:00:00 GMT-5").getTime();
 
 var x = setInterval(function () {
 
@@ -29,11 +29,11 @@ var x = setInterval(function () {
         countdownString += days + "d " + hours + "h " + minutes + "m " + seconds + "s";
     }
 
-    countdownString += " till Operation Echo"
+    countdownString += " until Live Drop"
 
     if (distance < 0) {
         clearInterval(x);
-        document.getElementById("countdown").innerHTML = "Operation Echo is In Progress";
+        document.getElementById("countdown").innerHTML = "Live Drop is In Progress";
     } else {
         document.getElementById("countdown").innerHTML = countdownString;
     }
