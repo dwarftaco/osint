@@ -147,20 +147,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
             displayFeedItems(rssFeedItems);
         });
     });
-
-    // // Load RSS feeds
-    // Object.entries(rssFeeds).forEach(([key, value]) => {
-    //     fetch(`https://api.allorigins.win/get?url=https://rssjson.com/v1.1/${encodeURIComponent(value)}`)
-    //         .then(response => response.json())
-    //         .then(data => {
-    //             let output = '';
-    //             data.items.forEach(item => {
-    //                 output += `<li><a href="${item.link}" target="_blank"><img src=${item.favicon} height='32px' width='32px'/>${item.pubDate} - ${key} - ${item.title}</a></li>`;
-    //             });
-    //             document.getElementById("newsfeeds").innerHTML += output;
-    //         })
-    //         .catch(error => console.error(`Error fetching the ${key} RSS feed:`, error));
-    // });
 });
 
 
