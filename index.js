@@ -5,7 +5,7 @@ var iframeMap = {
 }
 
 // Estimated datetime for now
-var countDownDate = new Date("Dec 27, 2024 12:00:00 GMT-5").getTime();
+var countDownDate = new Date("Dec 27, 2024 16:00:00 GMT-5").getTime();
 
 var x = setInterval(function () {
 
@@ -59,7 +59,6 @@ var x = setInterval(function () {
         }
     );
 }, 30000);
-
 
 let proxyUrl = 'https://api.allorigins.win/get?url='; // Public CORS proxy
 let rssFeeds = {
@@ -124,18 +123,18 @@ function displayFeedItems(feedItems) {
 }
 
 document.addEventListener("DOMContentLoaded", (event) => {
-    console.log("DOM fully loaded and parsed");
-    Array.from(document.getElementsByClassName("cctv-reload")).forEach(
-        function (element, index, array) {
-            element.addEventListener('loadstart', function () {
-                element.setAttribute("class", "cctv-reload loading");
-                console.log("loading");
-            });
-            element.addEventListener('canplay', function () {
-                element.setAttribute("class", "cctv-reload");
-            });
-        }
-    );
+    //console.log("DOM fully loaded and parsed");
+    //Array.from(document.getElementsByClassName("cctv-reload")).forEach(
+    //    function (element, index, array) {
+    //        element.addEventListener('loadstart', function () {
+    //        element.setAttribute("class", "cctv-reload loading");
+    //        console.log("loading");
+    //    });
+    //    element.addEventListener('canplay', function () {
+    //        element.setAttribute("class", "cctv-reload");
+    //    });
+    //    }
+    //);
 
     Object.entries(rssFeeds).forEach(([rssName, rssUrl]) => {
         fetchRSSWithProxy(proxyUrl, rssUrl).then((rssText) => {
@@ -148,7 +147,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
         });
     });
 });
-
 
 function openModal(block) {
     document.body.setAttribute("class", "modal-open");
