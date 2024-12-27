@@ -5,7 +5,7 @@ var iframeMap = {
 }
 
 // Estimated datetime for now
-var countDownDate = new Date("Dec 27, 2024 12:00:00 GMT-5").getTime();
+var countDownDate = new Date("Dec 27, 2024 16:00:00 GMT-5").getTime();
 
 var x = setInterval(function () {
 
@@ -60,20 +60,20 @@ var x = setInterval(function () {
     );
 }, 30000);
 
-document.addEventListener("DOMContentLoaded", (event) => {
-    console.log("DOM fully loaded and parsed");
-    Array.from(document.getElementsByClassName("cctv-reload")).forEach(
-        function (element, index, array) {
-            element.addEventListener('loadstart', function () {
-                element.setAttribute("class", "cctv-reload loading");
-                console.log("loading");
-            });
-            element.addEventListener('canplay', function () {
-                element.setAttribute("class", "cctv-reload");
-            });
-        }
-    );
-});
+// document.addEventListener("DOMContentLoaded", (event) => {
+//     console.log("DOM fully loaded and parsed");
+//     Array.from(document.getElementsByClassName("cctv-reload")).forEach(
+//         function (element, index, array) {
+//             element.addEventListener('loadstart', function () {
+//                 element.setAttribute("class", "cctv-reload loading");
+//                 console.log("loading");
+//             });
+//             // element.addEventListener('canplay', function () {
+//             //     element.setAttribute("class", "cctv-reload");
+//             // });
+//         }
+//     );
+// });
 
 
 function openModal(block) {
