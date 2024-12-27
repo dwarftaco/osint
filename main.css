@@ -175,6 +175,7 @@ main>#countdown {
     /* Remove the default bullets */
     list-style-type: none;
     max-width: 100%;
+    margin-top: 0;
 }
 
 section {
