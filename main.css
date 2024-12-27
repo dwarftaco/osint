@@ -171,6 +171,12 @@ main>#countdown {
     width: 100%;
 }
 
+#newsfeeds {
+    /* Remove the default bullets */
+    list-style-type: none;
+    max-width: 100%;
+}
+
 section {
     /* padding: 10px 40px; */
     margin: 1rem;
@@ -291,6 +297,35 @@ section .icon {
 
 video.loading {
     background: black url(loader.gif) center center no-repeat;
+}
+
+.newsfeed-item {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.newsfeed-icon {
+    flex-shrink: 0;
+}
+
+.newsfeed-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 8px;
+    overflow: hidden;
+    max-width: 80%;
+}
+
+.newsfeed-details a {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.newsfeed-pub-date {
+    white-space: nowrap;
 }
 
 /* section .icon.fullscreen {
