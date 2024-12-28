@@ -24,11 +24,11 @@ body {
 
 header {
     padding: 0px 30px;
-    /* background-color: var(--accent); */
-    /* font-family: 'Courier New', Courier, monospace; */
+    background-color: var(--accent);
+    font-family: 'Courier New', Courier, monospace;
 
-    background-image: url("wrapping-paper.avif");
-    background-size: 300px 300px;
+    /* background-image: url("card.png");
+    background-size: 200px 200px; */
 
     display: flex;
     flex-direction: row;
@@ -44,16 +44,19 @@ header .title {
     justify-items: center;
     align-items: center;
 
-    background-image: url("card.png");
-    background-size: 200px 200px;
+    /* background-image: url("card.png");
+    background-size: 200px 200px; */
     padding-left: 1rem;
     padding-right: 1rem;
     margin: 0.3rem;
+
+    margin-left: auto;
+    margin-right: auto;
 }
 
 header .title h1,
 h2 {
-    color: #333333;
+    color: #EFEFEF;
 }
 
 header .title .img-title {
@@ -164,6 +167,10 @@ main>#countdown {
 #cctv {
     height: 400px;
     width: 100%;
+}
+
+.cctv-reload {
+    width: 250px;
 }
 
 #misc {
@@ -333,9 +340,16 @@ video.loading {
     white-space: nowrap;
 }
 
-/* section .icon.fullscreen {
-    margin-left: auto;
-} */
+.icon {
+    display: inline-block;
+    transition: all .3s ease-out;
+}
+
+.icon:hover {
+    transform: translate(0, -3px);
+    text-shadow: 3px 3px 3px rgba(0,0,0,0.15); 
+}
+
 
 svg {
     fill: var(--main);
@@ -441,7 +455,7 @@ body.modal-open {
     }
 
     header .title {
-        padding: 1rem;
+        /* padding: 1rem; */
         margin-left: auto;
         margin-right: auto;
     }
@@ -455,10 +469,10 @@ body.modal-open {
         /* padding-right: 15px; */
     }
 
-    header .logo {
+    /* header .logo {
         height: 2rem;
         padding-right: 15px;
-    }
+    } */
 
     .modal-image {
         width: 100%;

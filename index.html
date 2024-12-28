@@ -16,13 +16,14 @@
 <body>
     <header>
         <div class="title">
-            <img class="logo" src="handwritten-logo.png">
-            <img class="img-title" src="handwritten-title.svg">
+            <img class="logo" src="logo.png">
+            <h1>OSINT Nexus</h1>
+            <!-- <img class="img-title" src="handwritten-title.svg"> -->
         </div>
         <!-- <img class="icon icon-button" src="refresh.png" onclick="reloadIFrame();"> -->
     </header>
     <main>
-        <h2>Merry Christmas, Agents! ☃️🎄</h2>
+        <h2>Welcome agents <div class="icon">👋</div></h2>
         <h2 id="countdown">...</h2>
         <div class="blocks">
             <section class="section-large-stretch">
@@ -45,7 +46,7 @@
                     <br>
                     <div class="section-title">
                         <h1>Map</h1>
-                        <a href="https://www.google.com/maps/d/u/1/edit?mid=1kWBQ9SNwwDjUrEqiFN1LQ6r5q6pWpGw&ll=45.510963354824064%2C-73.60038999999999&z=14"
+                        <a href="https://www.google.com/maps/d/u/1/edit?mid=10-RxsYFYR5-zzymnV4Tyk-k3q-9fxXc&ll=61.590626663779425%2C-149.42911644516002&z=11"
                             target="_blank">
                             <img class="icon icon-button" src="open.png">
                         </a>
@@ -53,28 +54,24 @@
                     <img class="icon icon-button fullscreen" src="fullscreen.png" onclick="openModal('Map')">
                 </div>
                 <iframe id="map"
-                    src="https://www.google.com/maps/d/u/6/embed?mid=1kWBQ9SNwwDjUrEqiFN1LQ6r5q6pWpGw&ehbc=2E312F&noprof=1"></iframe>
+                    src="https://www.google.com/maps/d/u/1/embed?mid=10-RxsYFYR5-zzymnV4Tyk-k3q-9fxXc&ehbc=2E312F"></iframe>
             </section>
             <section class="section-small">
                 <p id="datetime">...<br>&nbsp</p>
-                <div id="ww_e719a7f6a7f60" v='1.3' loc='id' a='{"t":"horizontal","lang":"en","sl_lpl":1,"ids":["wl2935"],"font":"Arial","sl_ics":"one","sl_sot":"celsius","cl_bkg":"image","cl_font":"#FFFFFF","cl_cloud":"#FFFFFF","cl_persp":"#81D4FA","cl_sun":"#FFC107","cl_moon":"#FFC107","cl_thund":"#FF5722"}'>More forecasts: <a href="https://oneweather.org/calgary/30_days/" id="ww_e719a7f6a7f60_u" target="_blank">Weather forecast Calgary 30 days</a></div><script async src="https://app3.weatherwidget.org/js/?id=ww_e719a7f6a7f60"></script>
+                <div id="ww_41526b3d1377e" v='1.3' loc='id'
+                    a='{"t":"horizontal","lang":"en","sl_lpl":1,"ids":["wl3148"],"font":"Arial","sl_ics":"one_a","sl_sot":"celsius","cl_bkg":"image","cl_font":"#FFFFFF","cl_cloud":"#FFFFFF","cl_persp":"#81D4FA","cl_sun":"#FFC107","cl_moon":"#FFC107","cl_thund":"#FF5722","el_nme":3}'>
+                    More forecasts: <a href="https://oneweather.org/new_york_city/30_days/" id="ww_41526b3d1377e_u"
+                        target="_blank">NYC weather 30 day</a></div>
+                <script async src="https://app3.weatherwidget.org/js/?id=ww_41526b3d1377e"></script>
             </section>
+            <!-- TODO: Figure out how to get traffic map again
             <section class="section-medium">
                 <div class="section-title">
                     <h1>Traffic</h1>
                 </div>
                 <img id="traffic"
                     src="https://www.google.com/maps/vt/data=XHPXLaEuKujieiEd8RwyvMDhzojV5_gjWQSbPscZ_9NX2yhhyRiMCpfJoDhfSpm9eD6RZPEjKQbe1ppLMbogrTVPaicCJiBPBHmHz766KpQ3_mtYMRmd-vxBMjBbWLuO6sG_CNtcqwIHw7Dt0UNQGQGzvFshZg5HVLXmyoWyYsdRE0_vY1mezqVGFLn80Lk2KefwGc1a2Rh3tcFqNPd6p5lbeJZ6_R1qYFuQx0STM_4sx8m1u4IfFLYq1sCSj4XYgDSgS_zcwpgzDO7w5A">
-            </section>
-
-
-            <section class="section-large-stretch">
-                <div class="section-title">
-                    <h1>Live Drop</h1>
-                </div>
-                <iframe id="live-drop" src="https://www.vision-environnement.com/live/player/montreal0.php?ez_iframe=1" style="border: 0; width: 100%; height: 100%;" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" scrolling="no" allow="autoplay; encrypted-media"></iframe>    
-            
-            </section>
+            </section> -->
             <section>
                 <div class="section-title">
                     <h1>CCTV</h1>
@@ -83,31 +80,12 @@
                     </a>
                 </div>
                 <div class="cctv-grid">
-                    <video class="cctv-reload loading" width="300" loop autoplay muted poster="data:image/gif,AAAA">
-                    </video>
-                    <video class="cctv-reload loading" width="300" loop autoplay muted poster="data:image/gif,AAAA">
-                    </video>
-                    <video class="cctv-reload loading" width="300" loop autoplay muted poster="data:image/gif,AAAA">
-                    </video>
-                    <video class="cctv-reload loading" width="300" loop autoplay muted poster="data:image/gif,AAAA">
-                    </video>
-                    <video class="cctv-reload loading" width="300" loop autoplay muted poster="data:image/gif,AAAA">
-                    </video>
-                    <video class="cctv-reload loading" width="300" loop autoplay muted poster="data:image/gif,AAAA">
-                    </video>
-                    <video class="cctv-reload loading" width="300" loop autoplay muted poster="data:image/gif,AAAA">
-                    </video>
-                    <video class="cctv-reload loading" width="300" loop autoplay muted poster="data:image/gif,AAAA">
-                    </video>
-                    <video class="cctv-reload loading" width="300" loop autoplay muted poster="data:image/gif,AAAA">
-                    </video>
+                    <img class="cctv-reload">
+                    <img class="cctv-reload">
+                    <img class="cctv-reload">
+                    <img class="cctv-reload">
+                    <img class="cctv-reload">
                 </div>
-            </section>
-            <section class="section-medium">
-                <div class="section-title">
-                    <h1>Newsfeed</h1>
-                </div>
-                <ul id="newsfeeds"></ul>
             </section>
             <section class="section-large-stretch">
                 <div class="section-header">
@@ -134,4 +112,5 @@
         <iframe id="modal-iframe"></iframe>
     </div>
 </body>
+
 </html>
