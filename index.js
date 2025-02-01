@@ -4,41 +4,41 @@ var iframeMap = {
     "Misc": "https://docs.google.com/document/d/e/2PACX-1vQB3aoK1ks-cDKkrYvW1mSHQBZvb806UR7yJNOkw8M39ZOahSprImaA_CyXdc7Ycy4uQj9ClsSa9nKg/pub?embedded=true"
 }
 
-var countDownDate = new Date("Jan 31, 2025 11:59:59 GMT-9").getTime();
+// var countDownDate = new Date("Jan 31, 2025 11:59:59 GMT-9").getTime();
 
-var x = setInterval(function () {
+// var x = setInterval(function () {
 
-    var now = new Date().getTime();
+//     var now = new Date().getTime();
 
-    var distance = countDownDate - now;
+//     var distance = countDownDate - now;
 
-    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+//     var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+//     var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+//     var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+//     var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-    var countdownString = "~";
+//     var countdownString = "~";
 
-    if (days == 0 && hours == 0 && minutes == 0) {
-        countdownString += seconds + "s";
-    } else if (days == 0 && hours == 0) {
-        countdownString += minutes + "m " + seconds + "s";
-    } else if (days == 0) {
-        countdownString += hours + "h " + minutes + "m " + seconds + "s";
-    } else {
-        countdownString += days + "d " + hours + "h " + minutes + "m " + seconds + "s";
-    }
+//     if (days == 0 && hours == 0 && minutes == 0) {
+//         countdownString += seconds + "s";
+//     } else if (days == 0 && hours == 0) {
+//         countdownString += minutes + "m " + seconds + "s";
+//     } else if (days == 0) {
+//         countdownString += hours + "h " + minutes + "m " + seconds + "s";
+//     } else {
+//         countdownString += days + "d " + hours + "h " + minutes + "m " + seconds + "s";
+//     }
 
-    countdownString += " to mail <a href='https://docs.google.com/document/d/1lGUMbrQVQfq_x88HOqB9pcCYU-D4mMvZun44ImelmkA/edit?tab=t.0'>Agent Reactivation Form</a>"
+//     countdownString += " to mail <a href='https://docs.google.com/document/d/1lGUMbrQVQfq_x88HOqB9pcCYU-D4mMvZun44ImelmkA/edit?tab=t.0'>Agent Reactivation Form</a>"
 
-    if (distance < 0) {
-        clearInterval(x);
-        document.getElementById("countdown").innerHTML = "You snooze, you lose";
-    } else {
-        document.getElementById("countdown").innerHTML = countdownString;
-    }
+//     if (distance < 0) {
+//         clearInterval(x);
+//         document.getElementById("countdown").innerHTML = "You snooze, you lose";
+//     } else {
+//         document.getElementById("countdown").innerHTML = countdownString;
+//     }
 
-}, 1000);
+// }, 1000);
 
 let options = {
     timeZone: 'America/Anchorage',

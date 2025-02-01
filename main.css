@@ -113,6 +113,8 @@ main>h2 {
 
 main>#countdown {
     margin-top: 0rem;
+    color: grey;
+    font-style: italic;
 }
 
 .blocks {
